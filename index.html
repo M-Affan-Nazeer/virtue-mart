@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtuo mart</title>
+  <link rel="shortcut icon" href="title.JPG" type="image/x-icon">
+
+
+</head>
+<style>
+  
+  nav{
+    /* background-color: rgba(31, 29, 29, 0.588); */
+    background-color: gray;
+      width: 100vw;
+    height: 100vh ;
+}
+svg {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%; height: max-content;
+}
+  svg text {
+    
+    font-weight: 900;
+    animation: welcome 8s forwards;
+    stroke-width: 2;
+    color: white;
+    stroke: blue;
+    font-size: 100px;
+  }
+  @keyframes welcome {
+    0%   {
+      fill: none; stroke: blue; 
+      stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    50%  {fill: none; stroke: blue;  }
+    70%  {fill: none; stroke: blue; stroke-width: 3; }
+    80% {
+      fill: black; stroke: white; 
+      stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+    90%  {fill: none; stroke: blue; ; stroke-width: 3; }
+    100%   {
+      fill: none; stroke: blue; 
+      stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    
+  }
+   @media only screen and (max-width:900px){
+   .body{
+    width: 100%;
+    height: 100%;
+   }
+   svg {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+     height: max-content;
+}
+svg text {
+    
+    font-weight: 900;
+    animation: welcome 8s forwards;
+    stroke-width: 2;
+    color: white;
+    stroke: blue;
+    font-size: 43px;
+  }
+
+
+}
+</style>
+<body class="body" >
+    <nav>
+        <svg>
+            <text  x="50%" y="50%" dy=".35em" text-anchor="middle" >
+                WELCOME... 
+            </text>
+        </svg>
+        <svg >
+            <text x="50%" y="50%" dy=".35em"  text-anchor="middle"> OUR WEBSITE </text>
+          </svg>
+          <svg >
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle"> IS PUBLIC  NOW </text>
+    
+        </svg>
+      </nav>
+
+ <script>
+  setTimeout(function() {
+  window.location.href = "main.html";
+  }, 8000);
+</script> 
+</body>
+</html>

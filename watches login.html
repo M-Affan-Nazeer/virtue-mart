@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body> 
+    <div class="login-container">
+        <h1> <strong> befor going forward you have to login </strong> </h1>
+        <h1>Login page</h1>
+        <form id="loginForm">
+            <div class="form-item">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder=" password is ABC">
+           
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"  required placeholder=" password is ABC">
+            </div>
+            <button type="submit">  Login</button>
+        </form>
+    </div>
+    
+</body>
+<script>    
+    
+    
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+       
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+    
+        if (username === "ABC" && password === "ABC") {
+            alert("Login successful!");
+            
+            window.location.href = "watches diviliery.html";
+             alert("NOW WE ARE ENTERING YOU ON NEXT BUTTON TO COMPLETE NEXT STAGE "); 
+            
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    });
+</script>
+
+</html>

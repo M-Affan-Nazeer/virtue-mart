@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="discription.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+      
+    
+
+</head>
+
+<body class="body">
+    <nav>
+        <div class="res">
+        <div class="box-1">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="shoes 1.jpeg" class="d-block w-100" alt="..." height="440px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="shoes 2.jpeg" class="d-block w-100" alt="..." height="440px" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="shoes 3.jpeg" class="d-block w-100" alt="..."height="440px">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
+        </div>
+        <div class="box-2">
+
+            <div class="subbox-1 ">
+                <p style="font-size: 25px; color: red;"> 4,500pkr <s
+                        style="font-size: 15px; color: black; font-weight: 500;">30000pkr</s> </p>
+                <div class="txt">
+                    <li> Free shipping only in karachi</li>
+
+                    <li>fast delivery </li>
+                    <p>quantity <span class="add" onclick="inc(),total2()" >+</span> <span class="quantity">1</span> <span class="subtract" onclick=" dec(),total2()" >-</span>
+                          <u>   <br> Total Price: <span id="total" >  4,500pkr </span> </u></p>
+                   
+                </div>
+
+            </div>
+            <br>
+            <div class="subbox-2">
+                <form action="">
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+                    </div>
+                </form>
+                <div class="review"> 50+reviews || 1000+Solds </div>
+                <hr>
+                <div class="discrp">
+                    <h3><u>discription</u></h3> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dicta
+                    eaque inventore reiciendis porro accusamus accusantium iste, earum explicabo quisquam maiores nobis
+                  
+                </div>
+            </div>
+        </div>
+        <div class="box-3">
+            <a href="shoes login.html" class="button-link"> Buy Now </a>
+        </div>
+    </nav>
+</body>
+
+<script>
+    var quantity =document.querySelector(".quantity")
+    var showtotal =document.querySelector("#total")
+    let count=0;
+    let total1=0;
+    function inc(){
+         if(count<10)
+        {
+            count++;        
+        }
+        quantity.innerHTML=count;
+    }
+    function dec(){
+        if(count>1)
+        {
+            count--;            
+        }
+        quantity.innerHTML=count;
+    }
+    function total2(){
+        total= 4500 * count;
+        showtotal.innerHTML= total+"pkr" ;
+    }
+
+</script>

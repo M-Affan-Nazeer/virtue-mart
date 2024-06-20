@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <!-- <h1> <strong> </strong> </h1> -->
+        <h1>buyer details & Pricing </h1>
+        <form id="loginForm">
+            <div class="form-item">
+                <label for="password"> how much item you want:</label>
+                <input type="text" name="" id="" class="inp" placeholder=" number of iteam you want ">
+                <label for="result">price :</label>
+                <input type="text" id="result" placeholder="price you have to pay ">
+                
+                <button class="calculation" ondblclick=" rex()" >  For Price </button> <br><br>
+                <br>
+                <label for="username">Your Delivery Addres:</label>
+                <input type="text" placeholder=" karachi">
+                <label for="username">bank details:</label>
+                <input type="text" placeholder="id:XX43234XX">
+                <input type="text"  required placeholder="LEAVE IT EMPTY">
+                
+                
+                
+            </div>
+        </div>
+            </div>
+            
+        </form>
+    </div>
+    <button type="submit" class="btn btn-primary" id="liveToastBtn" style=" border-radius: 231px;" ondblclick=" rex()"  > Place Order </button>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="LOGO.jpg" class="rounded me-2" alt="" width="15%">
+                <strong class="me-auto"> Virtuo     Mart</strong>
+                <small>1 sec ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                your order has been placed and will be delivered in as such in 4days
+            </div>
+
+
+
+
+</body>
+<script>
+
+    var inp = document.querySelector(".inp")
+    var cal = document.querySelector(".calculation")
+    var result = document.getElementById("result")
+    cal.addEventListener("click", textet)
+    function textet() {
+        let inp2 = 2500;
+        let a = +inp.value * +inp2;
+        result.value = "price of products of given order is " + a + "pkr";
+    }
+    
+    
+    
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+           
+        })
+    }
+      
+function rex(){
+    window.location.href = "main.html";
+}
+
+
+</script>
+
+</html>
